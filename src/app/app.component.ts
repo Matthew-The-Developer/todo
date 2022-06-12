@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { globals } from '@globals';
+import { AppService } from './core/services/app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo';
+  title = globals.title;
+
+  constructor(
+    public app: AppService
+  ) { }
 }
